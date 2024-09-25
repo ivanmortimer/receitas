@@ -1,0 +1,23 @@
+h2 {
+    font-size: larger;
+    text-align: center;
+}
+img {
+    width: 300px;
+}
+
+.li_vazio {
+    list-style-type: none;
+}
+
+#container_receitas {
+    display: flex;
+    flex-wrap: wrap;
+}
+#container_receitas > div {
+    background-color: rgb(249, 250, 212);
+    font-size: 16px;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+}
