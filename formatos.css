@@ -27,9 +27,15 @@ body {
 }
 header {
     position: fixed;
-    background-color: rgb(52, 58, 64);
+    top: 0;
     width: 100%;
+    z-index: 1000; /* Certifique-se de que o z-index do header seja alto */
+    background-color: rgb(52, 58, 64);
     color: rgb(200, 200, 200);
+}
+.card {
+    position: relative; /* Garante que ela respeite o fluxo normal */
+    z-index: 1; /* Menor que o header */
 }
 menu {
     display: flex;       /* Faz com que os items fiquem horizontalmente alinhados */
@@ -47,11 +53,18 @@ menu li a {
     display: block;              /* Faz comn que o link preencha o <li> */
 }
 menu li a:hover {
-    color: white;                /* Muda a cor do texto quando o mause passa por cima do link menu */
+    color: white;               /* Muda a cor do texto quando o mause passa por cima do link menu */
 }
 menu li a:active {
-    color: yellow;               /* Cor do texto ao ser clicado */
-  }
+    color: white;               /* Cor do texto ao ser clicado */
+    font-weight: bold;            /* Peso da fonte ao ser clicado */
+}
+
+/* Cor especial para o link da página ativa */
+menu li a.active_link {
+    color: white;    /* Cor do link da página atual */
+    font-weight: bold; /* Peso da fonte do link da página atual */
+}
 main {
     flex: 1; /* Isto faz com que o elemento <main> element cresça para preencher o espaço disponível */
     padding: 20px;
